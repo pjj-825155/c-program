@@ -1,0 +1,21 @@
+#include<stdio.h>
+main()
+{
+	int num,i,nian[100],yue[100],ri[100];
+	while(scanf("%d",&num)!=EOF)
+	{
+		for(i=0;i<num;i++)
+		{
+			scanf("%d-%d-%d",&nian[i],&yue[i],&ri[i]);
+		}
+		minn=nian[0];
+		for(i=1;i<num;i++)
+		{
+			if(minn>nian[i])
+			{
+				minn=nian[i];
+				mini=i;
+			}
+		} 
+	}
+} 

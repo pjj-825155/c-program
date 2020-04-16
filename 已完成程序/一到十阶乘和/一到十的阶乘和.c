@@ -1,0 +1,62 @@
+#include<stdio.h>
+main()
+{
+	int sum1,sum2,sum3,sum4,sum5,sum6,sum7,sum8,sum9,sum10;
+	int i1,i2,i3,i4,i5,i6,i7,i8,i9,i10;
+	int sum;
+	sum1=sum2=sum3=sum4=sum5=sum6=sum7=sum8=sum9=sum10=1;
+	i1=i2=i3=i4=i5=i6=i7=i8=i9=i10=1;
+	while(i1<11)
+	{
+		sum1=sum1*i1;
+		i1++;	
+	}
+	while(i2<10)
+	{
+		sum2=sum2*i2;
+		i2++;	
+	}
+	while(i3<9)
+	{
+		sum3=sum3*i3;
+		i3++;	
+	}
+	while(i4<8)
+	{
+		sum4=sum4*i4;
+		i4++;	
+	}
+	while(i5<7)
+	{
+		sum5=sum5*i5;
+		i5++;	
+	}
+	while(i6<6)
+	{
+		sum6=sum6*i6;
+		i6++;	
+	}
+	while(i7<5)
+	{
+		sum7=sum7*i7;
+		i7++;	
+	}
+	while(i8<4)
+	{
+		sum8=sum8*i8;
+		i8++;	
+	}
+	while(i9<3)
+	{
+		sum9=sum9*i9;
+		i9++;	
+	}
+	while(i10<2)
+	{
+		sum10=sum10*i10;
+		i10++;	
+	}
+	sum=sum1+sum2+sum3+sum4+sum5+sum6+sum7+sum8+sum9+sum10;
+	printf("%d\n",sum);
+	
+}

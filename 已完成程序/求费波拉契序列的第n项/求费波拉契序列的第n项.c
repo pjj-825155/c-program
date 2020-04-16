@@ -1,0 +1,19 @@
+#include<stdio.h>
+main()
+{
+	int i,num1,num2,num3,n;
+	while(scanf("%d",&n)!=EOF)
+	{
+		num1=1;
+		num2=1;
+		i=3;
+		while(i<=n)
+		{
+			num3=num1+num2;
+			num1=num2;
+			num2=num3;
+			i++;
+		}
+		printf("%d\n",num3);
+	}
+}

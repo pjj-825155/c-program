@@ -1,0 +1,31 @@
+#include<stdio.h>
+main()
+{
+	int ri,n;
+	scanf("%d",&n);
+	ri=4;
+	ri=ri+n;
+	while(ri>7)
+	{
+		ri=ri%7;
+	}
+	if(ri>6)
+	printf("Sunday\n");
+	else
+	if(ri>5)
+	printf("Saturday\n");
+	else
+	if(ri>4)
+	printf("Friday\n");
+	else
+	if(ri>3)
+	printf("Thursday\n");
+	else
+	if(ri>2)
+	printf("Wednesday\n");
+	else
+	if(ri>1)
+	printf("Tuesday\n");
+	else
+	printf("Monday\n");
+}

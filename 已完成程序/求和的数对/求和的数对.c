@@ -1,0 +1,49 @@
+#include<stdio.h>
+main()
+{
+	int num,shu[100000],he,i,x,k,min[500],max[500],xiao,da;
+	x=0;
+	scanf("%d",&num);
+	for(i=0;i<num;i++)
+	{
+		scanf("%d",&shu[i]);
+	}
+	scanf("%d",&he);
+	for(i=0;i<num;i++)
+	{
+		for(k=i+1;k<num;k++)
+		{
+			if(shu[i]+shu[k]==he)
+			{
+				if(shu[i]<shu[k])
+				{
+					min[x]=shu[i];
+					max[x]=shu[k];
+					x++;
+				}
+				else
+				{
+					min[x]=shu[k];
+					max[x]=shu[i];
+					x++;
+				}
+			}
+		}
+	}
+	xiao=min[0];
+	for(i=1;i<x;i++)
+	{
+		if(xiao>min[i])
+		xiao=min[i];
+	}
+	da=max[0];
+	for(i=1;i<x;i++)
+	{
+		if(da<max[i])
+		da=max[i];
+	}
+	if(xiao==0 && da==0)
+	printf("NO\n");
+	else
+	printf("%d %d\n",xiao,da);
+}

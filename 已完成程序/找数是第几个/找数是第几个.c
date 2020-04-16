@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+	int x,n,i;
+	int a[100];
+	while(scanf("%d",&x)!=EOF)
+	{
+		i=0;
+		while(i<x)
+		{
+			scanf("%d",&a[i]);
+			i++;
+		}
+		scanf("%d",&n);
+		i=0;
+		while(i<x)
+		{
+			if(n==a[i])
+			{
+				break;
+			}
+			i++; 
+		}
+		if(i==x)
+		printf("NO\n");
+		else
+		printf("%d\n",i+1);
+	}
+}

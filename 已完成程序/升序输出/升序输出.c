@@ -1,0 +1,41 @@
+#include<stdio.h>
+main()
+{
+	int n,a[100];
+	int i,k,m;
+	while(scanf("%d",&n)!=EOF)
+	{
+		i=0;
+		while(i<n)
+		{
+			scanf("%d",&a[i]);
+			i++;
+		}
+		i=0;
+		while(i<n-1)
+		{
+			k=i+1;
+			while(k<n)
+			{
+				if(a[i]>a[k])
+				{
+					m=a[i];
+					a[i]=a[k];
+					a[k]=m;
+				}
+				k++;
+			}
+			i++;
+		}
+		i=0;
+		while(i<n)
+		{
+			printf("%d",a[i]);
+			if(i==(n))
+			break;
+			putchar(' ');
+			i++;
+		}
+		putchar('\n');
+	}
+}

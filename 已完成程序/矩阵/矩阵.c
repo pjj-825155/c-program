@@ -1,0 +1,42 @@
+#include<stdio.h>
+main()
+{
+	int num,i,z,x,y,shu[100][100];
+	scanf("%d",&num);
+	for(i=0;i<num;i++)
+	{
+		scanf("%d",&z);
+		if(z==1)
+		printf("1\n");
+		else
+		{
+			shu[1][1]=1;
+			for(x=2;x<=z;x++)
+			{
+				shu[x][1]=shu[x-1][1]+1;
+			}
+			for(y=2;y<=z;y++)
+			{
+				shu[1][y]=shu[1][y-1]+1;
+			}
+			for(x=2;x<=z;x++)
+			{
+				for(y=2;y<=z;y++)
+				{
+					shu[x][y]=shu[x][1]*shu[1][y];
+				}
+			}
+			for(x=1;x<=z;x++)
+			{
+				for(y=1;y<=z;y++)
+				{
+					printf("%d",shu[x][y]);
+					if(y==z)
+					break;
+					putchar(' ');
+				}
+				putchar('\n');
+			}
+		}
+	}
+}

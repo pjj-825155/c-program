@@ -1,0 +1,61 @@
+#include<stdio.h>
+main()
+{
+	int num,i,nian[100],yue[100],ri[100],min_nian,min_yue,min_ri;
+	while(scanf("%d",&num)!=EOF)
+	{
+		i=0;
+		while(i<num)
+		{
+			scanf("%d-%d-%d",&nian[i],&yue[i],&ri[i]);
+			i++;
+		}
+		min_nian=nian[0];
+		min_yue=yue[0];
+		min_ri=ri[0];
+		for(i=1;i<num;i++)
+		{
+			if(min_nian>nian[i])
+			{
+				min_nian=nian[i];
+				min_yue=yue[i];
+				min_ri=ri[i];
+			}
+			else
+			if(min_nian<nian[i])
+			{
+				min_nian=min_nian;
+				min_yue=min_yue;
+				min_ri=min_ri;
+			}
+			else
+			if(min_yue>yue[i])
+			{
+				min_nian=nian[i];
+				min_yue=yue[i];
+				min_ri=ri[i];
+			}
+			else
+			if(min_yue<yue[i])
+			{
+				min_nian=min_nian;
+				min_yue=min_yue;
+				min_ri=min_ri;
+			}
+			else
+			if(min_ri>ri[i])
+			{
+				min_nian=nian[i];
+				min_yue=yue[i];
+				min_ri=ri[i];
+			}
+			else
+			{
+				min_nian=min_nian;
+				min_yue=min_yue;
+				min_ri=min_ri;
+			}
+		}
+		printf("%d-%02d-%02d\n",min_nian,min_yue,min_ri);
+	}	
+}

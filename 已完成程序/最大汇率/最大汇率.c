@@ -1,0 +1,45 @@
+#include<stdio.h>
+main()
+{
+	float money,max;
+	float m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12;
+	float z1,z2,z3,z4,z5,z6,z7,z8,z9,z10,z11,z12;
+	scanf("%f",&money);
+	scanf("%f%f%f%f%f%f%f%f%f%f%f%f",&m1,&m2,&m3,&m4,&m5,&m6,&m7,&m8,&m9,&m10,&m11,&m12);
+	z1=money*m1;
+	z2=money*m2;
+	z3=money*m3;
+	z4=money*m4;
+	z5=money*m5;
+	z6=money*m6;
+	z7=money*m7;
+	z8=money*m8;
+	z9=money*m9;
+	z10=money*m10;
+	z11=money*m11;
+	z12=money*m12;
+	max=z1;
+	if(max<z2)
+	max=z2;
+	if(max<z3)
+	max=z3;
+	if(max<z4)
+	max=z4;
+	if(max<z5)
+	max=z5;
+	if(max<z6)
+	max=z6;
+	if(max<z7)
+	max=z7;
+	if(max<z8)
+	max=z8;
+	if(max<z9)
+	max=z9;
+	if(max<z10)
+	max=z10;
+	if(max<z11)
+	max=z11;
+	if(max<z12) 
+	max=z12;
+	printf("%.2f\n",max);
+}

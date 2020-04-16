@@ -1,0 +1,27 @@
+#include<stdio.h>
+main()
+{
+	int num,i,k,m,n,shu[100],sum;
+	scanf("%d",&num);
+	for(i=0;i<num;i++)
+	{
+		for(k=0;1;k++)
+		{
+			scanf("%d",&shu[k]);
+			if(shu[k]==0)
+			break;
+		}
+		sum=0;
+		for(m=0;m<k;m++)
+		{
+			for(n=m+1;n<k;n++)
+			{
+				if(shu[m]==shu[n]*2)
+				sum++;
+				if(shu[n]==shu[m]*2)
+				sum++;
+			}
+		}
+		printf("%d\n",sum);
+	}
+}

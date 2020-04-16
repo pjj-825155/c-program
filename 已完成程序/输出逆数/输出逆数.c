@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int i,E,n,wei,m,chu,yu;
+	int a[100000];
+	scanf("%d",&n);
+	i=0;
+	E=1;
+	while(n>0)
+	{
+		wei=n/E;
+		if(wei==0)
+		break;
+		E=E*10;
+		i++;	
+	}
+	m=i;
+	chu=pow(10,i-1);
+	while(chu>0)
+	{
+		a[i]=n/chu;
+		yu=n%chu;
+		chu=chu/10;
+		n=yu;
+		i--;
+	}
+	i++;
+	if(a[i]==0)
+	i++;
+	while(i<m+1)
+	{
+		printf("%d",a[i]);
+		i++;
+	}
+	printf("\n");
+}

@@ -1,0 +1,28 @@
+#include<stdio.h>
+main()
+{
+	int num,i,k,shu[100000],he,sum,flag;
+	while(scanf("%d",&num)!=EOF)
+	{
+		for(i=0;i<num;i++)
+		{
+			scanf("%d",&shu[i]);
+		}
+		scanf("%d",&he);
+		sum=0;
+		for(k=1;k<=he;k++)
+		{
+			flag=1;
+			for(i=0;i<num;i++)
+			{
+				if(k==shu[i])
+				flag=0; 
+			}
+			if(flag==1)
+			{
+				sum=sum+k;
+			}
+		}
+		printf("%d\n",sum);
+	}
+}

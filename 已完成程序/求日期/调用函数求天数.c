@@ -1,0 +1,129 @@
+#include<stdio.h>
+int day(int nian,int yue,int ri);
+main()
+{
+	int nian,yue,ri; 
+	scanf("%d%d%d",&nian,&yue,&ri);
+	printf("%d\n",day(nian,yue,ri)); 
+}
+
+int day(int nian,int yue,int ri)
+{
+	int a,b,c,sun;
+	a=nian%4;
+	b=nian%400;
+	c=nian%100;
+	if(b==0)
+	{
+		if(yue>11)
+			sun=31+29+31+30+31+30+31+31+30+31+30+ri;
+		else
+		if(yue>10)
+			sun=31+29+31+30+31+30+31+31+30+31+ri;
+		else
+		if(yue>9)
+			sun=31+29+31+30+31+30+31+31+30+ri;
+		else
+		if(yue>8)
+			sun=31+29+31+30+31+30+31+31+ri;
+		else
+		if(yue>7)
+			sun=31+29+31+30+31+30+31+ri;
+		else
+		if(yue>6)
+			sun=31+29+31+30+31+30+ri;
+		else
+		if(yue>5)
+			sun=31+29+31+30+31+ri;
+		else
+		if(yue>4)
+			sun=31+29+31+30+ri;
+		else
+		if(yue>3)
+			sun=31+29+31+ri;
+		else
+		if(yue>2)
+			sun=31+29+ri;
+		else
+		if(yue>1)
+			sun=31+ri;
+		else
+			sun=ri;
+	}
+	else
+	if(a==0 && c!=0)
+	{
+		if(yue>11)
+			sun=31+29+31+30+31+30+31+31+30+31+30+ri;
+		else
+		if(yue>10)
+			sun=31+29+31+30+31+30+31+31+30+31+ri;
+		else
+		if(yue>9)
+			sun=31+29+31+30+31+30+31+31+30+ri;
+		else
+		if(yue>8)
+			sun=31+29+31+30+31+30+31+31+ri;
+		else
+		if(yue>7)
+			sun=31+29+31+30+31+30+31+ri;
+		else
+		if(yue>6)
+			sun=31+29+31+30+31+30+ri;
+		else
+		if(yue>5)
+			sun=31+29+31+30+31+ri;
+		else
+		if(yue>4)
+			sun=31+29+31+30+ri;
+		else
+		if(yue>3)
+			sun=31+29+31+ri;
+		else
+		if(yue>2)
+			sun=31+29+ri;
+		else
+		if(yue>1)
+			sun=31+ri;
+		else
+			sun=ri;
+	}
+	else
+	{
+		if(yue>11)
+			sun=31+28+31+30+31+30+31+31+30+31+30+ri;
+		else
+		if(yue>10)
+			sun=31+28+31+30+31+30+31+31+30+31+ri;
+		else
+		if(yue>9)
+			sun=31+28+31+30+31+30+31+31+30+ri;
+		else
+		if(yue>8)
+			sun=31+28+31+30+31+30+31+31+ri;
+		else
+		if(yue>7)
+			sun=31+28+31+30+31+30+31+ri;
+		else
+		if(yue>6)
+			sun=31+28+31+30+31+30+ri;
+		else
+		if(yue>5)
+			sun=31+28+31+30+31+ri;
+		else
+		if(yue>4)
+			sun=31+28+31+30+ri;
+		else
+		if(yue>3)
+			sun=31+28+31+ri;
+		else
+		if(yue>2)
+			sun=31+28+ri;
+		else
+		if(yue>1)
+			sun=31+ri;
+		else
+			sun=ri;
+	}
+	return(sun);
+}

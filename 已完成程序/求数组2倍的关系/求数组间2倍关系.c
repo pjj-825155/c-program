@@ -1,0 +1,33 @@
+#include<stdio.h>
+main()
+{
+	int num,sum,i,n,m,a[100];
+	scanf("%d",&num);
+	while(num>0)
+	{
+		i=0;
+		while(scanf("%d",a[i])!=EOF)
+		{
+			if(a[i]==0)
+			break;
+			i++;
+		}
+		m=i;
+		n=0;
+		i=0;
+		sum=0;
+		while(i<m)
+		{
+			n=0;
+			while(n<m)
+			{
+				if(a[i]==(2*a[n]))
+				sum++;
+				n++;
+			}
+			i++;
+		}
+		num--;
+		printf("%d\n",sum); 
+	}
+} 

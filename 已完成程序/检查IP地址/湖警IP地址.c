@@ -1,0 +1,21 @@
+#include<stdio.h>
+main()
+{
+	int ip1,ip2,ip3,ip4;
+	while(scanf("%d.%d.%d.%d",&ip1,&ip2,&ip3,&ip4)!=EOF)
+	{
+		if(ip1==122)
+			if(ip2==204)
+				if(ip3>=224&&ip3<=231)
+					if(ip4>=0&&ip4<=255)
+					printf("YES\n");
+					else
+					printf("NO\n");
+				else
+				printf("NO\n");
+			else
+			printf("NO\n");
+		else
+		printf("NO\n");
+	}
+}
